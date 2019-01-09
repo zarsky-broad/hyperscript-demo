@@ -1,0 +1,61 @@
+@import "fonts/Montserrat.css";
+
+body, input, textarea, select, button {
+  font-family: "Montserrat", sans-serif;
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #e5e5e5;
+  margin: 0;
+  font-size: 14px;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  min-width: 1200px;
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
+#root {
+  overflow: auto;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+#root.overlayOpen {
+  overflow: hidden;
+}
+
+#root.overlayOpen.overHeight {
+  overflow-y: scroll;
+}
+
+.table-row:not(:hover) .hover-only {
+  visibility: hidden;
+}
+
+.focus-style:focus {
+  /* Note: using CSS and !important here because react-interactive focus style wasn't applying on autofocus */
+  border: 1px solid #2691d0 !important;
+  outline: none !important;
+}
